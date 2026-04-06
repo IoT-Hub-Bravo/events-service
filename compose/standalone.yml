@@ -1,4 +1,4 @@
-name: ${COMPOSE_PROJECT_NAME:-auth-service}
+name: ${COMPOSE_PROJECT_NAME:-events-service}
 
 services:
 

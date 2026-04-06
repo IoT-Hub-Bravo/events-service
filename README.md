@@ -1,38 +1,35 @@
-# IoT Hub Auth Service
+# IoT Hub Events Service
 
-Authentication and authorization service for the IoT Hub platform.
+Service for creating and managing user-visible events triggered by rule evaluation.
 
 ## Purpose
 
-The Auth Service is responsible for identity and access management across the platform.  
-It manages users, authentication flows, authorization primitives, and token-related concerns.
+The events Service owns the lifecycle of user-visible events produced by rule matches.
 
 ## Responsibilities
 
-- user management
-- authentication
-- authorization
-- token issuance and validation
-- identity-related lifecycle events
-- access control primitives for other platform services
+- consume rule match events
+- create events
+- manage event lifecycle and status
+- support event acknowledgement
+- provide event history APIs
+- expose event data for user interfaces
 
 ## Owned data
 
-- users
-- authentication credentials
-- roles and permissions
-- identity metadata
+- events
+- event status
+- event history
+- acknowledgement metadata
 
 ## Integrations
 
 ### Inbound
-- frontend
-- API gateway
-- internal platform clients
+- rule match events
+- frontend and internal clients
 
 ### Outbound
-- audit flow for important identity-related actions
-- other services through token validation or identity context propagation
+- events audit
 
 ## Technology
 
